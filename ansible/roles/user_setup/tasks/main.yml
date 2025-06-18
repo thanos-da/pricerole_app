@@ -33,4 +33,3 @@
     line: 'PasswordAuthentication no'
     state: present
     backup: yes
-  notify: Restart SSH
