@@ -33,7 +33,7 @@
     creates: "{{ openssl_prefix }}/bin/openssl"
 
 - name: Show OpenSSL version
-  shell: "{{ openssl_prefix }}/bin/openssl version"
+  shell: "bin/openssl version"
   register: openssl_version_output
 
 - name: Print OpenSSL version
