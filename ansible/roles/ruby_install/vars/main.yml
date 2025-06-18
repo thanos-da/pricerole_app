@@ -1,0 +1,7 @@
+rpx_user: "rpx"
+rpx_grp: "rpx"
+openssl_version: "1.1.1w"
+openssl_prefix: "/opt/openssl-1.1"
+ruby_version: "3.0.0"
+deploy_branch: "master"
+app_path: "/home/rpx/app"

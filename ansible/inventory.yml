@@ -1,0 +1,12 @@
+all:
+  hosts:
+    rails-server-1:
+      ansible_host: 34.227.57.219
+      ansible_user: ubuntu
+      ansible_ssh_private_key_file: ~/Downloads/shankaraws.pem
+      ansible_ssh_common_args: '-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=accept-new'
+    rails-server-2:
+      ansible_host: 34.227.57.219
+      ansible_user: rpx
+      ansible_ssh_private_key_file: /var/lib/jenkins/.ssh/id_rsa
+      ansible_ssh_common_args: '-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=accept-new'

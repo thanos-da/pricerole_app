@@ -1,0 +1,18 @@
+- name: SSH Key Generation and Sharing
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - role: ssh_setup
+
+- name: Create user and configure SSH on deploy server
+  hosts: rails-server-1
+  become: true
+  gather_facts: false
+  roles:
+    - role: user_setup
+
+- name: Install Ruby with RVM and deploy app
+  hosts: rails-server-2
+  become: true
+  roles:
+    - role: ruby_install

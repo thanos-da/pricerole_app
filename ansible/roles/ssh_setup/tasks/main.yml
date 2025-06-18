@@ -1,0 +1,11 @@
+- name: Generate SSH key pair if not exist
+  community.crypto.openssh_keypair:
+    path: "{{ ssh_key_path }}"
+    type: rsa
+    size: 2048
+    force: false
+
+- name: Read the public key
+  slurp:
+    src: "{{ public_key_path }}"
+  register: pub_key_content
